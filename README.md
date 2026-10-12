@@ -26,6 +26,23 @@
 
 ---
 
+## Translated names (Raptor Dev Services fork)
+
+Upstream only publishes `name` in English. This fork adds `name_i18n` to every exercise, with the name in
+English, Spanish (Mexico) and French, so an app can show and search exercises in the user's language:
+
+```json
+"name": "barbell bench press",
+"name_i18n": { "en": "barbell bench press", "es": "press de banca con barra", "fr": "développé couché à la barre" }
+```
+
+- `name` is untouched, so merging upstream keeps working.
+- `data/name_i18n-review.tsv` lists the three names side by side for review. Fix a translation there and in
+  `data/exercises.json` together.
+- The schema (`data/exercises.schema.json`) declares the new field.
+
+---
+
 ## 📦 Data Source
 
 **This repository provides:**

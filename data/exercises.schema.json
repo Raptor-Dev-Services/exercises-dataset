@@ -61,6 +61,17 @@
           "description": "Full exercise name (e.g. \"3/4 sit-up\").",
           "minLength": 1
         },
+        "name_i18n": {
+          "type": "object",
+          "description": "Exercise name by language (en, es, fr). Added in the Raptor Dev Services fork so apps can search in the user's language; \"name\" stays as published upstream.",
+          "properties": {
+            "en": { "type": "string", "minLength": 1 },
+            "es": { "type": "string", "minLength": 1 },
+            "fr": { "type": "string", "minLength": 1 }
+          },
+          "required": ["en", "es", "fr"],
+          "additionalProperties": false
+        },
         "category": {
           "type": "string",
           "description": "Body part category. Mirrors body_part.",
